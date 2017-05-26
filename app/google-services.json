@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "689016930075",
+    "firebase_url": "https://dima-app-project.firebaseio.com",
+    "project_id": "dima-app-project",
+    "storage_bucket": "dima-app-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689016930075:android:180003f13fb94f46",
+        "android_client_info": {
+          "package_name": "com.dima.restaurantmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689016930075-iecuuiuflmeuvqasblmd7051np8iv1q8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3F7FGqdrQ-FSrupiNo1njn0Mgxg0iChw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

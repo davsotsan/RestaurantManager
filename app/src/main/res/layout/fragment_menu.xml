@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dima.restaurantmanager.FragmentMenu">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:id="@+id/lblNombreProductoMenu0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textAlignment="textStart"
+                android:layout_marginStart="10dp"
+                android:text="Producto"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/lblPrecio0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:text="Precio"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:text="Qty"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:text="Add"
+                android:textStyle="normal|bold" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/lineaCabecera"
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:background="@color/common_action_bar_splitter"
+            android:layout_marginTop="2dp"
+            >
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listaMenu" />
+
+    </LinearLayout>
+</FrameLayout>
