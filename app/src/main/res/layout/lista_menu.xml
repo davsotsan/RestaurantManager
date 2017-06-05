@@ -1,50 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal" >
+    android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/lblNombreProductoMenu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:layout_marginStart="10dp" />
+    <TextView
+        android:id="@+id/lblNombreProductoMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="5" />
 
-        <TextView
-            android:id="@+id/lblPrecio"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textAlignment="center" />
+    <TextView
+        android:id="@+id/lblPrecio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:textAlignment="center" />
 
-        <LinearLayout
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:layout_width="0px"
-            android:layout_height="0px"/>
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
 
-        <AutoCompleteTextView
-            android:id="@+id/textCantidad"
-            android:text="0"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:nextFocusUp="@+id/textCantidad"
-            android:nextFocusLeft="@+id/textCantidad"
-            android:nextFocusDown="@+id/textCantidad"
-            android:nextFocusForward="@+id/textCantidad"
-            android:nextFocusRight="@+id/textCantidad"/>
+    <ImageButton
+        android:id="@+id/buttonRemoveProductSingle"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_gravity="center"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:src="@mipmap/ic_remove_black" />
 
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:id="@+id/buttonAddProduct"
-            android:src="@mipmap/ic_add_black"
-            android:layout_weight="1"
-            android:background="@android:drawable/screen_background_light_transparent" />
+    <AutoCompleteTextView
+        android:id="@+id/textCantidad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:nextFocusDown="@+id/textCantidad"
+        android:nextFocusForward="@+id/textCantidad"
+        android:nextFocusLeft="@+id/textCantidad"
+        android:nextFocusRight="@+id/textCantidad"
+        android:nextFocusUp="@+id/textCantidad"
+        android:text="0"
+        android:textAlignment="center" />
+
+    <ImageButton
+        android:id="@+id/buttonAddProductSingle"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:src="@mipmap/ic_add_black"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/buttonAddProduct"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:src="@mipmap/ic_add_black" />
 
 
 </LinearLayout>

@@ -8,13 +8,11 @@
     tools:context="com.dima.restaurantmanager.MenuActivity">
 
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-       >
+        android:orientation="vertical">
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appbarlayout"
@@ -22,21 +20,21 @@
             android:layout_height="wrap_content"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-            <android.support.v7.widget.Toolbar
-                xmlns:android="http://schemas.android.com/apk/res/android"
+            <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_height="?attr/actionBarSize"
                 android:layout_width="match_parent"
-                android:minHeight="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-                <TextView android:id="@+id/txtAbTitulo"
+                <TextView
+                    android:id="@+id/txtAbTitulo"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Menú"
-                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+                    android:text="Menú" />
 
             </android.support.v7.widget.Toolbar>
 
@@ -48,20 +46,75 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-            <android.support.v4.view.ViewPager
-                android:id="@+id/viewpager"
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:minHeight="256dp"
+            android:layout_weight="1"/>
+
+
+        <Button
+            android:id="@+id/buttonCabecera"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="0"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:text="Lista de productos"></Button>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/containerExpandible">
+
+            <LinearLayout
+                android:id="@+id/titulosCabecera"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
 
-                />
+                <TextView
+                    android:id="@+id/lblCantidad0"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cantidad"
+                    android:textAlignment="center"
+                    android:textStyle="normal|bold" />
 
-        </FrameLayout>
+                <TextView
+                    android:id="@+id/lblProducto0"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="4"
+                    android:text="Productos"
+                    android:textAlignment="textStart"
+                    android:textStyle="normal|bold" />
 
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/lineaCabecera"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/common_google_signin_btn_text_dark_disabled"></FrameLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listaProductos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

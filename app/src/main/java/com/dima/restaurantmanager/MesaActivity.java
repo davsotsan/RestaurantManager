@@ -96,8 +96,6 @@ public class MesaActivity extends AppCompatActivity {
                     public void populateViewHolder(ProductoPedidoHolder productosViewHolder, ProductoPedido producto, int position) {
                         productosViewHolder.setNombre(producto.getNombre());
                         productosViewHolder.setCantidad(String.valueOf(producto.getCantidad()));
-                        System.out.println(producto.getNombre());
-                        System.out.println(String.valueOf(producto.getCantidad()));
                     }
                 };
 

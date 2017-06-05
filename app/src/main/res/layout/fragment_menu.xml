@@ -61,7 +61,7 @@
             android:id="@+id/lineaCabecera"
             android:layout_width="match_parent"
             android:layout_height="3px"
-            android:background="@color/common_action_bar_splitter"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
             android:layout_marginTop="2dp"
             >
         </FrameLayout>
@@ -70,6 +70,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/listaMenu" />
+
+
 
     </LinearLayout>
 </FrameLayout>
